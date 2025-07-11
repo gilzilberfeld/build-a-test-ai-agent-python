@@ -1,0 +1,18 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# OpenAI Configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
+
+# Sample API endpoints for testing
+SAMPLE_APIS = {
+    "jsonplaceholder": "https://jsonplaceholder.typicode.com",
+    "httpbin": "https://httpbin.org",
+    "reqres": "https://reqres.in/api"
+}
+
+# Test configuration
+TEST_TIMEOUT = 30
+MAX_RETRIES = 3

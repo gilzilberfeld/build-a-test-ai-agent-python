@@ -1,0 +1,83 @@
+"""
+Exercise 1: API Analysis Agent
+Your task: Complete the missing methods to analyze API endpoints
+"""
+
+import openai
+from config import OPENAI_API_KEY
+from utils.sample_apis import get_sample_api
+
+
+class APIAnalysisAgent:
+    def __init__(self, api_key):
+        self.client = openai.OpenAI(api_key=api_key)
+
+    def analyze_api_endpoint(self, endpoint_info):
+        """
+        TODO: Create a prompt to analyze an API endpoint
+
+        Args:
+            endpoint_info: Dict with 'method', 'path', 'description'
+
+        Returns:
+            String with analysis of what this endpoint does
+        """
+        # HINT: Create a prompt that asks the AI to analyze the endpoint
+        # Consider what kind of testing might be needed
+
+        prompt = f"""
+        Analyze this API endpoint:
+        Method: {endpoint_info['method']}
+        Path: {endpoint_info['path']}
+        Description: {endpoint_info['description']}
+
+        # TODO: Add your analysis prompt here
+        """
+
+        # TODO: Make the API call
+        # TODO: Return the response
+
+        return "TODO: Implement API analysis"
+
+    def get_testing_suggestions(self, endpoint_info):
+        """
+        TODO: Generate testing suggestions for an endpoint
+
+        Args:
+            endpoint_info: Dict with endpoint details
+
+        Returns:
+            List of testing suggestions
+        """
+        # TODO: Create prompt for testing suggestions
+        # TODO: Make API call
+        # TODO: Parse response into list
+
+        return ["TODO: Implement testing suggestions"]
+
+
+def main():
+    print("=== Exercise 1: API Analysis Agent ===")
+
+    # Get sample API
+    sample_api = get_sample_api()
+    endpoint = sample_api["endpoints"][0]
+
+    print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
+
+    # TODO: Create agent instance
+    agent = APIAnalysisAgent(OPENAI_API_KEY)
+
+    # TODO: Analyze the endpoint
+    analysis = agent.analyze_api_endpoint(endpoint)
+    print(f"\nAnalysis: {analysis}")
+
+    # TODO: Get testing suggestions
+    suggestions = agent.get_testing_suggestions(endpoint)
+    print(f"\nTesting Suggestions:")
+    for i, suggestion in enumerate(suggestions, 1):
+        print(f"{i}. {suggestion}")
+
+
+if __name__ == "__main__":
+    main()

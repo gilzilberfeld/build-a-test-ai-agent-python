@@ -1,0 +1,98 @@
+"""
+Exercise 4: Test Execution Engine
+Your task: Execute generated test code safely and capture results
+"""
+
+import openai
+import requests
+import json
+from config import OPENAI_API_KEY
+from utils.test_runner import execute_code_safely
+
+
+class TestExecutionEngine:
+    def __init__(self, api_key):
+        self.client = openai.OpenAI(api_key=api_key)
+
+    def execute_test(self, test_code, timeout=30):
+        """
+        TODO: Execute test code safely and capture results
+
+        Args:
+            test_code: Python code to execute
+            timeout: Maximum execution time
+
+        Returns:
+            Dict with execution results
+        """
+        # TODO: Use execute_code_safely from utils
+        # TODO: Format results properly
+        # TODO: Handle execution errors
+
+        return {
+            "success": False,
+            "error": "TODO: Implement test execution"
+        }
+
+    def analyze_test_results(self, results):
+        """
+        TODO: Use AI to analyze test results and provide insights
+
+        Args:
+            results: Dict with test execution results
+
+        Returns:
+            String with AI analysis of results
+        """
+        # TODO: Create prompt for result analysis
+        # TODO: Make API call
+        # TODO: Return analysis
+
+        return "TODO: Implement result analysis"
+
+
+def main():
+    print("=== Exercise 4: Test Execution Engine ===")
+
+    engine = TestExecutionEngine(OPENAI_API_KEY)
+
+    # Sample test code to execute
+    test_code = '''
+import requests
+import json
+
+def test_api_endpoint():
+    """Test the JSONPlaceholder API"""
+    url = "https://jsonplaceholder.typicode.com/posts/1"
+    response = requests.get(url)
+
+    results = {
+        "status_code": response.status_code,
+        "success": response.status_code == 200,
+        "response_time": response.elapsed.total_seconds(),
+        "has_title": "title" in response.json(),
+        "has_body": "body" in response.json()
+    }
+
+    return results
+
+# Execute the test
+test_result = test_api_endpoint()
+print(f"Test completed: {test_result}")
+'''
+
+    print("Executing test code...")
+
+    # TODO: Execute the test
+    results = engine.execute_test(test_code)
+
+    print(f"\nExecution Results:")
+    print(json.dumps(results, indent=2))
+
+    # TODO: Analyze results with AI
+    analysis = engine.analyze_test_results(results)
+    print(f"\nAI Analysis: {analysis}")
+
+
+if __name__ == "__main__":
+    main()
