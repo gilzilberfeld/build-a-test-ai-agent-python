@@ -4,39 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199b66e1-8792-4db6-9642-ed82edbefd5d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/build-a-test-agent-python.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/demo_01_simple_agent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/demo_02_test_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/demo_03_code_execution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demos/demo_04_complete_workflow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_02_test_ideas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_03_code_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_04_test_execution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_05_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_06_full_workflow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_02_test_ideas.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_03_code_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_04_test_execution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_05_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_06_full_workflow.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/sample_apis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/test_runner.py" afterDir="false" />
+    <list default="true" id="199b66e1-8792-4db6-9642-ed82edbefd5d" name="Changes" comment="first version">
+      <change afterPath="$PROJECT_DIR$/workshop_outline.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,9 +68,20 @@
       <option name="presentableId" value="Default" />
       <updated>1752241888342</updated>
     </task>
+    <task id="LOCAL-00001" summary="first version">
+      <option name="closed" value="true" />
+      <created>1752243831455</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752243831455</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first version" />
+    <option name="LAST_COMMIT_MESSAGE" value="first version" />
   </component>
 </project>
