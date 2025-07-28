@@ -3,32 +3,45 @@ Demo 1: Simple AI Agent - Shows basic LLM interaction
 Run this to understand how an AI agent thinks and responds
 """
 
-import openai
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class SimpleAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        # Set up the model name and configuration once
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(
+            max_output_tokens=200
+        )
 
     def think(self, question):
         """Ask the AI to think about something"""
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are a helpful API testing assistant."},
-                {"role": "user", "content": question}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are a helpful API testing assistant.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = question)]
+                )
             ],
-            max_tokens=200
+            config=self.config
         )
-        return response.choices[0].message.content
+        return response.text
 
 
 def main():
     print("=== Simple AI Agent Demo ===")
 
     # Create our simple agent
-    agent = SimpleAgent(OPENAI_API_KEY)
+
+    agent = SimpleAgent(GEMINI_API_KEY)
 
     # Ask it to think about APIs
     question = "What should I test when I have a REST API that manages user posts?"

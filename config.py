@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# OpenAI Configuration
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
+# Gemini Configuration
+GEMINI_API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
 
 # Sample API endpoints for testing
 SAMPLE_APIS = {
