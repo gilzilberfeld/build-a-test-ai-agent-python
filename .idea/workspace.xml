@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="199b66e1-8792-4db6-9642-ed82edbefd5d" name="Changes" comment="first version">
-      <change afterPath="$PROJECT_DIR$/workshop_outline.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdocs/api_models.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdocs/storing_key.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/workshop_outline.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/workshop_outline.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +27,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gilzilberfeld&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gilzilberfeld/build-a-test-ai-agent-python.git&quot;,
+    &quot;accountId&quot;: &quot;7edc7939-d564-4202-a55e-33923567e0bc&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2zjQEEDCdFjLQ1OkCogS2gXOlNM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,7 +58,8 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/utils"
+    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/utils",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -51,11 +68,14 @@
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\solutions" />
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\demos" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\Docs" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+        <option value="bundled-python-sdk-337b0a7a993a-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.19416.19" />
       </set>
     </attachedChunks>
   </component>
