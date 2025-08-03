@@ -2,15 +2,18 @@
 Demo 4: Complete Workflow - Shows all pieces working together
 """
 
-import openai
 import requests
 import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class MiniTestAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=100)
 
     def analyze_and_test(self, api_url):
         """Complete workflow: analyze → generate → execute → report"""
@@ -35,27 +38,41 @@ class MiniTestAgent:
 
     def _analyze_api(self, api_url):
         """Analyze what the API does"""
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an API analyst. Analyze what this API does in one sentence."},
-                {"role": "user", "content": f"API URL: {api_url}"}
+        prompt = f"API URL: {api_url}\nAnalyze what this API does in one sentence."
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an API analyst. Analyze what this API does in one sentence.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=100
+            config=self.config
         )
-        return response.choices[0].message.content
+        return response.text
 
     def _generate_test_plan(self, api_url):
         """Generate a simple test plan"""
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "Generate a one-sentence test plan for this API."},
-                {"role": "user", "content": f"API URL: {api_url}"}
+        prompt = f"API URL: {api_url}\nGenerate a one-sentence test plan for this API."
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "Generate a one-sentence test plan for this API.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=100
+            config=self.config
         )
-        return response.choices[0].message.content
+        return response.text
 
     def _execute_test(self, api_url):
         """Execute the actual test"""
@@ -84,7 +101,7 @@ class MiniTestAgent:
 def main():
     print("=== Complete Workflow Demo ===")
 
-    agent = MiniTestAgent(OPENAI_API_KEY)
+    agent = MiniTestAgent(GEMINI_API_KEY)
 
     # Test a simple API
     api_url = "https://httpbin.org/get"

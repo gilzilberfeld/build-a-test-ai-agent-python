@@ -4,6 +4,9 @@ Demo 3: Code Execution - Shows how to run generated code safely
 
 import requests
 import json
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 def simple_api_test():
@@ -25,6 +28,34 @@ def simple_api_test():
     return result
 
 
+def analyze_with_gemini(result):
+    """Use Gemini to analyze the API test result"""
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    model_name = 'gemini-1.5-flash-latest'
+    config = types.GenerateContentConfig(max_output_tokens=150)
+    prompt = f"""
+    Here is the result of an API test:
+    {json.dumps(result, indent=2)}
+    
+    Please analyze the result and suggest improvements or next steps.
+    """
+    response = client.models.generate_content(
+        model=model_name,
+        contents=[
+            types.Content(
+                role="user",
+                parts=[types.Part.from_text(text = "You are an expert API tester.")]
+            ),
+            types.Content(
+                role="user",
+                parts=[types.Part.from_text(text = prompt)]
+            )
+        ],
+        config=config
+    )
+    return response.text
+
+
 def main():
     print("=== Code Execution Demo ===")
 
@@ -38,6 +69,11 @@ def main():
         print("\n❌ Test FAILED!")
 
     print(f"Response time: {result['response_time']:.2f} seconds")
+
+    # Use Gemini to analyze the result
+    print("\nGemini Analysis:")
+    analysis = analyze_with_gemini(result)
+    print(analysis)
 
 
 if __name__ == "__main__":
