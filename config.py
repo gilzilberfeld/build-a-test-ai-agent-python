@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Gemini Configuration
-GEMINI_API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # Sample API endpoints for testing
 SAMPLE_APIS = {

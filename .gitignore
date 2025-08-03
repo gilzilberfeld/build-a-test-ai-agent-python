@@ -89,5 +89,9 @@ fabric.properties
 !.idea/codeStyles
 !.idea/runConfigurations
 
+# Ignore environment variables
+.env
+.env.*
+!.env.example
 # End of https://www.toptal.com/developers/gitignore/api/pycharm+all
 '+
