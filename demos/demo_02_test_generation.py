@@ -3,12 +3,17 @@ Demo 2: Test Idea Generation - Shows how AI can generate test scenarios
 """
 
 import openai
-from config import OPENAI_API_KEY
-
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 class TestIdeaGenerator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(
+            max_output_tokens=300
+        )
 
     def generate_test_ideas(self, api_description):
         """Generate test ideas for an API"""
@@ -23,21 +28,27 @@ class TestIdeaGenerator:
         Format as a numbered list.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert API tester."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert API tester.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=300
+            config=self.config
         )
-        return response.choices[0].message.content
+        return response.text
 
 
 def main():
     print("=== Test Idea Generation Demo ===")
 
-    generator = TestIdeaGenerator(OPENAI_API_KEY)
+    generator = TestIdeaGenerator(GEMINI_API_KEY)
 
     # Simple API description
     api_description = "GET /users/{id} - Returns user information including name, email, and registration date"
