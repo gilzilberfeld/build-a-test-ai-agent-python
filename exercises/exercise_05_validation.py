@@ -6,12 +6,16 @@ Your task: Implement AI-powered response validation
 import openai
 import requests
 import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class ResponseValidator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=150)
 
     def validate_response_structure(self, response_data, expected_structure):
         """
@@ -53,7 +57,7 @@ class ResponseValidator:
 def main():
     print("=== Exercise 5: Response Validation ===")
 
-    validator = ResponseValidator(OPENAI_API_KEY)
+    validator = ResponseValidator(GEMINI_API_KEY)
 
     # Get sample response
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1")

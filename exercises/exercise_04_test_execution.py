@@ -6,13 +6,17 @@ Your task: Execute generated test code safely and capture results
 import openai
 import requests
 import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.test_runner import execute_code_safely
 
 
 class TestExecutionEngine:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=150)
 
     def execute_test(self, test_code, timeout=30):
         """
@@ -49,12 +53,10 @@ class TestExecutionEngine:
         # TODO: Return analysis
 
         return "TODO: Implement result analysis"
-
-
 def main():
     print("=== Exercise 4: Test Execution Engine ===")
 
-    engine = TestExecutionEngine(OPENAI_API_KEY)
+    engine = TestExecutionEngine(GEMINI_API_KEY)
 
     # Sample test code to execute
     test_code = '''

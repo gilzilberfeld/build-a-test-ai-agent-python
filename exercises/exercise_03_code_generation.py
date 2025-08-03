@@ -3,13 +3,16 @@ Exercise 3: Test Code Generation
 Your task: Generate executable Python test code
 """
 
-import openai
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class TestCodeGenerator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=200)
 
     def generate_test_function(self, test_description, endpoint_info):
         """
@@ -69,7 +72,7 @@ class TestCodeGenerator:
 def main():
     print("=== Exercise 3: Test Code Generation ===")
 
-    generator = TestCodeGenerator(OPENAI_API_KEY)
+    generator = TestCodeGenerator(GEMINI_API_KEY)
 
     # Test scenario
     test_description = "Test that GET /posts/1 returns a valid post with required fields"

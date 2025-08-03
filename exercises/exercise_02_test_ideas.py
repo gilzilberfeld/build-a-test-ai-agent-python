@@ -3,14 +3,17 @@ Exercise 2: Test Idea Generation
 Your task: Generate comprehensive test ideas for API endpoints
 """
 
-import openai
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class TestIdeaGenerator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=200)
 
     def generate_test_categories(self, endpoint_info):
         """
@@ -56,7 +59,7 @@ class TestIdeaGenerator:
 def main():
     print("=== Exercise 2: Test Idea Generation ===")
 
-    generator = TestIdeaGenerator(OPENAI_API_KEY)
+    generator = TestIdeaGenerator(GEMINI_API_KEY)
 
     # Use a more complex endpoint
     endpoint = SAMPLE_ENDPOINTS[0]["endpoints"][1]  # GET /posts/1

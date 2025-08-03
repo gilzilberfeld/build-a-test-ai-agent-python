@@ -3,16 +3,17 @@ Exercise 6: Complete API Test Agent
 Your task: Integrate all components into a complete workflow
 """
 
-import openai
-import requests
-import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class APITestAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=200)
         self.test_results = []
 
     def run_complete_analysis(self, api_endpoints):
@@ -66,7 +67,7 @@ class APITestAgent:
 def main():
     print("=== Exercise 6: Complete API Test Agent ===")
 
-    agent = APITestAgent(OPENAI_API_KEY)
+    agent = APITestAgent(GEMINI_API_KEY)
 
     # Use sample endpoints
     endpoints = SAMPLE_ENDPOINTS[0]["endpoints"][:3]  # First 3 endpoints

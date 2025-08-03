@@ -3,14 +3,17 @@ Exercise 1: API Analysis Agent
 Your task: Complete the missing methods to analyze API endpoints
 """
 
-import openai
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import get_sample_api
 
 
 class APIAnalysisAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=100)
 
     def analyze_api_endpoint(self, endpoint_info):
         """
@@ -66,7 +69,7 @@ def main():
     print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
 
     # TODO: Create agent instance
-    agent = APIAnalysisAgent(OPENAI_API_KEY)
+    agent = APIAnalysisAgent(GEMINI_API_KEY)
 
     # TODO: Analyze the endpoint
     analysis = agent.analyze_api_endpoint(endpoint)
