@@ -2,14 +2,17 @@
 Solution 1: API Analysis Agent - Complete Implementation
 """
 
-import openai
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import get_sample_api
 
 
 class APIAnalysisAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=200)
 
     def analyze_api_endpoint(self, endpoint_info):
         """
@@ -30,16 +33,21 @@ class APIAnalysisAgent:
 
         Keep response under 150 words.
         """
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert API analyst focused on testing scenarios."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert API analyst focused on testing scenarios.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=200
+            config=self.config
         )
-        return response.choices[0].message.content
+        return response.text
 
     def get_testing_suggestions(self, endpoint_info):
         """
@@ -59,19 +67,24 @@ class APIAnalysisAgent:
 
         Focus on practical tests that would catch real issues.
         """
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert API tester. Generate practical test scenarios."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert API tester. Generate practical test scenarios.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=150
+            config=self.config
         )
 
-        # Parse response into list
+        # Parse response.text into list
         suggestions = []
-        for line in response.choices[0].message.content.split('\n'):
+        for line in response.text.split('\n'):
             if line.strip() and any(char.isdigit() for char in line[:5]):
                 # Extract test name after number
                 test_name = line.split('.', 1)[1].strip() if '.' in line else line.strip()
@@ -90,7 +103,7 @@ def main():
     print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
 
     # Create agent instance
-    agent = APIAnalysisAgent(OPENAI_API_KEY)
+    agent = APIAnalysisAgent(GEMINI_API_KEY)
 
     # Analyze the endpoint
     analysis = agent.analyze_api_endpoint(endpoint)

@@ -2,18 +2,21 @@
 Solution 6: Complete API Test Agent - Full Implementation
 """
 
-import openai
 import requests
 import json
 import time
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class APITestAgent:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
         self.test_results = []
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=400)
 
     def analyze_endpoint(self, endpoint_info):
         """Analyze a single endpoint"""
@@ -25,16 +28,22 @@ class APITestAgent:
         In 1-2 sentences, describe what this endpoint does and its main purpose.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an API analyst. Be concise."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an API analyst. Be concise.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=100
+            config=self.config
         )
 
-        return response.choices[0].message.content
+        return response.text
 
     def generate_test_for_endpoint(self, endpoint_info):
         """Generate test code for an endpoint"""
@@ -52,16 +61,22 @@ class APITestAgent:
         Return ONLY the Python function code.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "Generate clean, executable Python test code."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "Generate clean, executable Python test code.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=400
+            config=self.config
         )
 
-        return response.choices[0].message.content
+        return response.text
 
     def execute_test_code(self, test_code):
         """Execute test code and return results"""
@@ -172,22 +187,28 @@ class APITestAgent:
         Keep it concise and business-focused.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert test analyst creating executive summaries."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert test analyst creating executive summaries.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=400
+            config=self.config
         )
 
-        return response.choices[0].message.content
+        return response.text
 
 
 def main():
     print("=== Solution 6: Complete API Test Agent ===")
 
-    agent = APITestAgent(OPENAI_API_KEY)
+    agent = APITestAgent(GEMINI_API_KEY)
 
     # Use sample endpoints
     endpoints = SAMPLE_ENDPOINTS[0]["endpoints"][:3]  # First 3 endpoints

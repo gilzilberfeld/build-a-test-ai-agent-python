@@ -2,15 +2,17 @@
 Solution 2: Test Idea Generation - Complete Implementation
 """
 
-import openai
-import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class TestIdeaGenerator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=400)
 
     def generate_test_categories(self, endpoint_info):
         """
@@ -31,18 +33,21 @@ class TestIdeaGenerator:
 
         Format each section clearly with the category name and numbered tests.
         """
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert API tester. Generate comprehensive test scenarios."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert API tester. Generate comprehensive test scenarios.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=400
+            config=self.config
         )
-
-        # Parse response into categories
-        content = response.choices[0].message.content
+        content = response.text
         categories = {
             "happy_path": [],
             "error_handling": [],
@@ -89,19 +94,24 @@ class TestIdeaGenerator:
         2. Second most important test
         etc.
         """
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert test prioritization specialist."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert test prioritization specialist.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=300
+            config=self.config
         )
 
         # Parse prioritized tests
         prioritized = []
-        for line in response.choices[0].message.content.split('\n'):
+        for line in response.text.split('\n'):
             if line.strip() and any(char.isdigit() for char in line[:5]):
                 test_name = line.split('.', 1)[1].strip() if '.' in line else line.strip()
                 prioritized.append(test_name)
@@ -112,7 +122,7 @@ class TestIdeaGenerator:
 def main():
     print("=== Solution 2: Test Idea Generation ===")
 
-    generator = TestIdeaGenerator(OPENAI_API_KEY)
+    generator = TestIdeaGenerator(GEMINI_API_KEY)
 
     # Use a more complex endpoint
     endpoint = SAMPLE_ENDPOINTS[0]["endpoints"][1]  # GET /posts/1

@@ -2,14 +2,17 @@
 Solution 3: Test Code Generation - Complete Implementation
 """
 
-import openai
 import ast
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class TestCodeGenerator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=500)
 
     def generate_test_function(self, test_description, endpoint_info):
         """
@@ -39,17 +42,22 @@ class TestCodeGenerator:
         Return ONLY the Python function code, no explanation.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system",
-                 "content": "You are an expert Python developer. Generate clean, executable test code."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert Python developer. Generate clean, executable test code.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=500
+            config=self.config
         )
 
-        return response.choices[0].message.content
+        return response.text
 
     def validate_generated_code(self, code):
         """
@@ -81,7 +89,7 @@ class TestCodeGenerator:
 def main():
     print("=== Solution 3: Test Code Generation ===")
 
-    generator = TestCodeGenerator(OPENAI_API_KEY)
+    generator = TestCodeGenerator(GEMINI_API_KEY)
 
     # Test scenario
     test_description = "Test that GET /posts/1 returns a valid post with required fields (id, title, body, userId)"

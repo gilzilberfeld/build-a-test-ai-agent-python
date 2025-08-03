@@ -2,15 +2,18 @@
 Solution 5: Response Validation - Complete Implementation
 """
 
-import openai
 import requests
 import json
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 
 
 class ResponseValidator:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=300)
 
     def validate_response_structure(self, response_data, expected_structure):
         """
@@ -38,16 +41,22 @@ class ResponseValidator:
         Be specific about what's wrong if validation fails.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an API response validator. Be thorough and specific."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an API response validator. Be thorough and specific.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=300
+            config=self.config
         )
 
-        content = response.choices[0].message.content
+        content = response.text
 
         # Parse the response
         is_valid = "VALID: true" in content.lower() or "valid: true" in content.lower()
@@ -96,16 +105,22 @@ class ResponseValidator:
         List each anomaly found, or respond "No anomalies detected" if everything looks normal.
         """
 
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system", "content": "You are an expert at detecting data anomalies and security issues."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert at detecting data anomalies and security issues.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=250
+            config=self.config
         )
 
-        content = response.choices[0].message.content
+        content = response.text
 
         if "no anomalies detected" in content.lower():
             return []
@@ -126,7 +141,7 @@ class ResponseValidator:
 def main():
     print("=== Solution 5: Response Validation ===")
 
-    validator = ResponseValidator(OPENAI_API_KEY)
+    validator = ResponseValidator(GEMINI_API_KEY)
 
     # Get sample response
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1")

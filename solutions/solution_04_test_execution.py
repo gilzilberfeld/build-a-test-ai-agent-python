@@ -2,17 +2,20 @@
 Solution 4: Test Execution Engine - Complete Implementation
 """
 
-import openai
 import requests
 import json
 import time
-from config import OPENAI_API_KEY
+import google.genai as genai
+from google.genai import types
+from config import GEMINI_API_KEY
 from utils.test_runner import execute_code_safely
 
 
 class TestExecutionEngine:
     def __init__(self, api_key):
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = genai.Client(api_key=api_key)
+        self.model_name = 'gemini-1.5-flash-latest'
+        self.config = types.GenerateContentConfig(max_output_tokens=300)
 
     def execute_test(self, test_code, timeout=30):
         """
@@ -73,24 +76,27 @@ class TestExecutionEngine:
 
         Keep response concise and actionable.
         """
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "system",
-                 "content": "You are an expert API test analyst. Provide clear, actionable insights."},
-                {"role": "user", "content": prompt}
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = "You are an expert API test analyst. Provide clear, actionable insights.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text = prompt)]
+                )
             ],
-            max_tokens=300
+            config=self.config
         )
-
-        return response.choices[0].message.content
+        return response.text
 
 
 def main():
     print("=== Solution 4: Test Execution Engine ===")
 
-    engine = TestExecutionEngine(OPENAI_API_KEY)
+    engine = TestExecutionEngine(GEMINI_API_KEY)
 
     # Sample test code to execute
     test_code = '''
