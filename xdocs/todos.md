@@ -39,19 +39,19 @@ Possible outline:
 4. Demo 2: Test Idea Generation (learn: specific prompting)
 5. Exercise 1.2: Test Case Suggestions
 6. Demo X: Structured Results (learn: structured results)
-6. Exercise 2.1: Categorization
-7. Demo XX: Code generation (learn: code generation)
-7. Exercise 3.1: Test Code Generation
-8. Demo XXX: Code Execution (learn: code execution)
-9. Exercise 4.1: Code Execution
-10. Demo 3: Result Analysis (learn: analyze results)
-11. Exercise 4.2: Result Analysis
-12. Demo 4: Whole Process (learn: putting it all together)
-13. Exercise 6 Whole process.
+7. Exercise 2.1: Categorization
+8. Demo XX: Code generation (learn: code generation)
+9. Exercise 3.1: Test Code Generation
+10. Demo XXX: Code Execution (learn: code execution)
+11. Exercise 4.1: Code Execution
+12. Demo 3: Result Analysis (learn: analyze results)
+13. Exercise 4.2: Result Analysis
+14. Demo 4: Whole Process (learn: putting it all together)
+15. Exercise 6 Whole process.
 
 Advanced Topics:
-14. Exercise 2.2: Prioritization
-15. Demo X: For Validation
-16. Exercise 3.2: code Validation
-17. Exercise 5.1: Result validation
-18. Exercise 5.2: Anomalies
+16. Exercise 2.2: Prioritization
+17. Demo X: For Validation
+17. Exercise 3.2: code Validation
+19. Exercise 5.1: Result validation
+20. Exercise 5.2: Anomalies
