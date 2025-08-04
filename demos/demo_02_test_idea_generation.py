@@ -2,7 +2,6 @@
 Demo 2: Test Idea Generation - Shows how AI can generate test scenarios
 """
 
-import openai
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY

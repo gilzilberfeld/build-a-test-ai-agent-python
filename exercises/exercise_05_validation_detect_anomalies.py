@@ -3,7 +3,6 @@ Exercise 5: Response Validation
 Your task: Implement AI-powered response validation
 """
 
-import openai
 import requests
 import json
 import google.genai as genai

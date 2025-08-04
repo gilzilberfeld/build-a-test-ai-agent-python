@@ -3,13 +3,10 @@ Exercise 4: Test Execution Engine
 Your task: Execute generated test code safely and capture results
 """
 
-import openai
-import requests
 import json
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY
-from utils.test_runner import execute_code_safely
 
 
 class TestExecutionEngine:

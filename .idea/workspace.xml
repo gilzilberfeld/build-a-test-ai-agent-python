@@ -4,79 +4,63 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="199b66e1-8792-4db6-9642-ed82edbefd5d" name="Changes" comment="Solutions with gemini">
-      <change beforePath="$PROJECT_DIR$/.idea/build-a-test-agent-python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/build-a-test-agent-python.iml" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demos/demo_02_test_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_02_test_idea_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demos/demo_03_code_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_03_result_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_02_test_ideas.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_02_test_categories_prioritization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_03_code_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_03_code_generation_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_04_test_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_04_test_execution_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_05_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_05_validation_detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_02_test_ideas.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_02_test_categories_prioritization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_03_code_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_03_code_generation_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_04_test_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_04_test_execution_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_05_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_05_validation_detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;gilzilberfeld&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gilzilberfeld"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/gilzilberfeld/build-a-test-ai-agent-python.git&quot;,
-    &quot;accountId&quot;: &quot;7edc7939-d564-4202-a55e-33923567e0bc&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gilzilberfeld/build-a-test-ai-agent-python.git",
+    "accountId": "7edc7939-d564-4202-a55e-33923567e0bc"
   }
-}</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2zjQEEDCdFjLQ1OkCogS2gXOlNM" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="30obGNWVjSf3pIvF2AZ8q0rYBS2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.demo_01_simple_agent.executor": "Run",
-    "Python.demo_02_test_generation.executor": "Run",
-    "Python.demo_03_code_execution.executor": "Run",
-    "Python.demo_04_complete_workflow.executor": "Run",
-    "Python.stam.executor": "Run",
+    "Python.solution_01_api_analysis_suggestions.executor": "Run",
+    "Python.solution_02_test_categories_prioritization.executor": "Run",
+    "Python.solution_03_code_generation_validation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/utils",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "git-widget-placeholder": "master"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\utils" />
-      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\solutions" />
-      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\demos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\Docs" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Python.demo_01_simple_agent">
-    <configuration name="demo_01_simple_agent" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.solution_03_code_generation_validation">
+    <configuration name="solution_01_api_analysis_suggestions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -85,11 +69,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_01_simple_agent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,7 +82,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_02_test_generation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="solution_02_test_categories_prioritization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,11 +91,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_02_test_generation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_02_test_categories_prioritization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_03_code_execution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="solution_03_code_generation_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,55 +113,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_03_code_execution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="demo_04_complete_workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="build-a-test-agent-python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_04_complete_workflow.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="stam" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="build-a-test-agent-python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/stam.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_03_code_generation_validation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,11 +128,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.demo_01_simple_agent" />
-        <item itemvalue="Python.demo_04_complete_workflow" />
-        <item itemvalue="Python.demo_03_code_execution" />
-        <item itemvalue="Python.demo_02_test_generation" />
-        <item itemvalue="Python.stam" />
+        <item itemvalue="Python.solution_03_code_generation_validation" />
+        <item itemvalue="Python.solution_02_test_categories_prioritization" />
+        <item itemvalue="Python.solution_01_api_analysis_suggestions" />
       </list>
     </recent_temporary>
   </component>
@@ -203,95 +141,14 @@
       </set>
     </attachedChunks>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="199b66e1-8792-4db6-9642-ed82edbefd5d" name="Changes" comment="" />
-      <created>1752241888342</created>
+      <changelist id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="" />
+      <created>1754296778407</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752241888342</updated>
+      <updated>1754296778407</updated>
     </task>
-    <task id="LOCAL-00001" summary="first version">
-      <option name="closed" value="true" />
-      <created>1752243831455</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1752243831455</updated>
-    </task>
-    <task id="LOCAL-00002" summary="first version">
-      <option name="closed" value="true" />
-      <created>1753714054836</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1753714054836</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1 demo file converted to gemini">
-      <option name="closed" value="true" />
-      <created>1753716563313</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1753716563313</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Demo works with env file">
-      <option name="closed" value="true" />
-      <created>1754227678127</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1754227678127</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Demo2 works with gemini">
-      <option name="closed" value="true" />
-      <created>1754227866027</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1754227866027</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Demo3,4 works with gemini">
-      <option name="closed" value="true" />
-      <created>1754227986952</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1754227986952</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Exercises with gemini">
-      <option name="closed" value="true" />
-      <created>1754228625829</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1754228625829</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Solutions with gemini">
-      <option name="closed" value="true" />
-      <created>1754229881871</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1754229881871</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added outline" />
-    <MESSAGE value="first version" />
-    <MESSAGE value="1 demo file converted to gemini" />
-    <MESSAGE value="Demo works with env file" />
-    <MESSAGE value="Demo2 works with gemini" />
-    <MESSAGE value="Demo3,4 works with gemini" />
-    <MESSAGE value="Exercises with gemini" />
-    <MESSAGE value="Solutions with gemini" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solutions with gemini" />
   </component>
 </project>

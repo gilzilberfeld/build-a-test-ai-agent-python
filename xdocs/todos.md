@@ -1,9 +1,57 @@
-# Decisions
-### Decide about which models (Gemini?)
-### Not sure about e03 validation part. Maybe leave it. Or give it something else to do if not validated.
+# Todos & Outline
 
+## Demo 1 (simple agent)
+## ex1 -> Separate into two parts: 1. analysis, 2. Test case suggestions
+### part 1.1 is the introduction.
+### Maybe let them write the prompt themselves.
 
-# Todos
-### Store key
-### Replace OpenAI with Gemini (or options)
-### Test EXecution doesn't have a demo. But also, exercise need to be simplified.
+## Demo 2 (test idea generation, maybe before 1.2)
+### demo 2 looks like exercise 1.2.
+### will need to separate the two parts, both exercise and solution
+
+## ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
+### Requires a demo.
+### The solution of the prioritization shows numbers, not the test names. It could be what we want, but needs to check.
+### both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
+
+## ex3 -> Has the generation part by LLM and validation.
+### The generation is straight forward prompt.
+### The validation part requrires AST, may leave it out. Also it may fail incorrectly
+### Also, need a skip option if the generated code is not valid.
+### If deferred need a demo, Also need to separate 
+### Solution for Validation also includes execution.  Need to do something about it
+
+## Demo 3 (result analysis)
+### ex4 -> Has the code execution part, and analysis results
+### Demo 3 covers the analysis, need demo for code execution.
+### Can also separated.
+
+## ex5-> validation and anomalies. Can be deferred to later.
+
+## Demo 4 (whole process)
+## ex6 -> The whole process, from test case generation to execution and analysis.
+### It doesen't use the modules created before. Might want to use the modules.
+
+Possible outline:
+1. Introduction
+2. Demo 1: Simple Agent (learn: prompting)
+3. Exercise 1.1: Analysis 
+4. Demo 2: Test Idea Generation (learn: specific prompting)
+5. Exercise 1.2: Test Case Suggestions
+6. Demo X: Structured Results (learn: structured results)
+6. Exercise 2.1: Categorization
+7. Demo XX: Code generation (learn: code generation)
+7. Exercise 3.1: Test Code Generation
+8. Demo XXX: Code Execution (learn: code execution)
+9. Exercise 4.1: Code Execution
+10. Demo 3: Result Analysis (learn: analyze results)
+11. Exercise 4.2: Result Analysis
+12. Demo 4: Whole Process (learn: putting it all together)
+13. Exercise 6 Whole process.
+
+Advanced Topics:
+14. Exercise 2.2: Prioritization
+15. Demo X: For Validation
+16. Exercise 3.2: code Validation
+17. Exercise 5.1: Result validation
+18. Exercise 5.2: Anomalies
