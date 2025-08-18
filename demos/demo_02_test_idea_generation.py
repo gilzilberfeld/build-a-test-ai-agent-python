@@ -19,12 +19,11 @@ class TestIdeaGenerator:
         prompt = f"""
         API Description: {api_description}
 
-        Generate 5 different test scenarios for this API. For each test, provide:
-        1. Test name
-        2. What it tests
-        3. Expected result
-
-        Format as a numbered list.
+        For each test, provide just the test name in this format:
+        1. Test name here
+        2. Test name here
+        etc. 
+        
         """
 
         response = self.client.models.generate_content(

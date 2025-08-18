@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="updated todos/outline">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Removed prompts.">
+      <change beforePath="$PROJECT_DIR$/demos/demo_02_test_idea_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_02_test_idea_generation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
@@ -161,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754318141903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed prompts.">
+      <option name="closed" value="true" />
+      <created>1755527137732</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1755527137732</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +185,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Renaming and todos/outline" />
     <MESSAGE value="updated todos/outline" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated todos/outline" />
+    <MESSAGE value="Removed prompts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed prompts." />
   </component>
 </project>

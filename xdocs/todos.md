@@ -4,10 +4,9 @@
 ## v ex1 -> Separate into two parts: 1. analysis, 2. Test case suggestions
 ### v part 1.1 is the introduction.
 ### v Maybe let them write the prompt themselves.
-
-## Demo 2 (test idea generation, maybe before 1.2)
-### demo 2 looks like exercise 1.2.
-### will need to separate the two parts, both exercise and solution
+## v Demo 2 (test idea generation, maybe before 1.2)
+### v demo 2 looks like exercise 1.2.
+### x will need to separate the two parts, both exercise and solution
 
 ## ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
 ### Requires a demo.
@@ -35,12 +34,11 @@
 Possible outline:
 1. Introduction
 2. Demo 1: Simple Agent (learn: prompting)
-3. Exercise 1.1: Analysis
-
-
+3. Exercise 1 (part 1): Analysis
 4. Demo 2: Test Idea Generation (learn: specific prompting)
 5. Exercise 1.2: Test Case Suggestions
-6. Demo X: Structured Results (learn: structured results)
+
+7. Demo X: Structured Results (learn: structured results)
 7. Exercise 2.1: Categorization
 8. Demo XX: Code generation (learn: code generation)
 9. Exercise 3.1: Test Code Generation

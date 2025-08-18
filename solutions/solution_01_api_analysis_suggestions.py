@@ -60,11 +60,12 @@ class APIAnalysisAgent:
         Path: {endpoint_info['path']}
         Description: {endpoint_info['description']}
 
-        For each test, provide just the test name in this format:
-        1. Test name here
-        2. Test name here
-        etc.
+        Generate 5 different test scenarios for this API. For each test, provide:
+        1. Test name
+        2. What it tests
+        3. Expected result
 
+        Format as a numbered list.
         Focus on practical tests that would catch real issues.
         """
         response = self.client.models.generate_content(
