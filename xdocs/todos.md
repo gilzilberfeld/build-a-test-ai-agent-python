@@ -9,7 +9,7 @@
 ### x will need to separate the two parts, both exercise and solution
 
 ## ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
-### Requires a demo.
+### v Requires a demo.
 ### The solution of the prioritization shows numbers, not the test names. It could be what we want, but needs to check.
 ### both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
 
@@ -37,12 +37,12 @@ Possible outline:
 3. Exercise 1 (part 1): Analysis
 4. Demo 2: Test Idea Generation (learn: specific prompting)
 5. Exercise 1.2: Test Case Suggestions
-
-7. Demo X: Structured Results (learn: structured results)
-7. Exercise 2.1: Categorization
-8. Demo XX: Code generation (learn: code generation)
+6. Demo W: Structured Results (learn: structured results)
+7. 
+8. Exercise 2.1: Categorization
+8. Demo X: Code generation (learn: code generation)
 9. Exercise 3.1: Test Code Generation
-10. Demo XXX: Code Execution (learn: code execution)
+10. Demo Y: Code Execution (learn: code execution)
 11. Exercise 4.1: Code Execution
 12. Demo 3: Result Analysis (learn: analyze results)
 13. Exercise 4.2: Result Analysis
@@ -51,7 +51,7 @@ Possible outline:
 
 Advanced Topics:
 16. Exercise 2.2: Prioritization
-17. Demo X: For Validation
+17. Demo Z: For Validation
 17. Exercise 3.2: code Validation
 19. Exercise 5.1: Result validation
 20. Exercise 5.2: Anomalies
