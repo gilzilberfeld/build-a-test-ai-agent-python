@@ -14,11 +14,11 @@
 ### v both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
 
 ## ex3 -> Has the generation part by LLM and validation.
-### The generation is straight forward prompt.
-### The validation part requrires AST, may leave it out. Also it may fail incorrectly
-### Also, need a skip option if the generated code is not valid.
-### If deferred need a demo, Also need to separate 
-### Solution for Validation also includes execution.  Need to do something about it
+### v The generation is straight forward prompt. The execution is the tricky part.  Got demo
+### v The validation part requires AST, may leave it out. Also it may fail incorrectly
+### x Also, need a skip option if the generated code is not valid.
+### v If deferred need a demo, Also need to separate 
+### v Solution for Validation also includes execution.  Need to do something about it
 
 ## Demo 3 (result analysis)
 ### ex4 -> Has the code execution part, and analysis results
@@ -38,10 +38,10 @@ Possible outline:
 4. Demo 2: Test Idea Generation (learn: specific prompting)
 5. Exercise 1.2: Test Case Suggestions
 6. Demo W: Structured Results (learn: structured results)
-7. 
-8. Exercise 2.1: Categorization
+7. Exercise 2.1: Categorization
 8. Demo X: Code generation (learn: code generation)
 9. Exercise 3.1: Test Code Generation
+10. 
 10. Demo Y: Code Execution (learn: code execution)
 11. Exercise 4.1: Code Execution
 12. Demo 3: Result Analysis (learn: analyze results)
