@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Changed prompts.">
-      <change afterPath="$PROJECT_DIR$/demos/demo_0W_structured_results.py" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Added structured results demo">
+      <change afterPath="$PROJECT_DIR$/exercises/exercise_022_test_prioritization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/solution_022_test_prioritization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_02_test_categories_prioritization.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_021_test_categorization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_02_test_categories_prioritization.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_021_test_categories.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,20 +51,22 @@
   "keyToString": {
     "Python.demo_0W_structured_results.executor": "Run",
     "Python.solution_01_api_analysis_suggestions.executor": "Run",
+    "Python.solution_022_test_prioritization.executor": "Run",
     "Python.solution_02_test_categories_prioritization.executor": "Run",
     "Python.solution_03_code_generation_validation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/exercises"
+    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/solutions"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\solutions" />
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demo_0W_structured_results">
+  <component name="RunManager" selected="Python.solution_022_test_prioritization">
     <configuration name="demo_0W_structured_results" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
@@ -106,7 +111,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="solution_02_test_categories_prioritization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="solution_021_test_categories" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,7 +124,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_02_test_categories_prioritization.py" />
+      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\solutions\solution_021_test_categories.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="solution_022_test_prioritization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="build-a-test-agent-python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_022_test_prioritization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,9 +179,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.solution_022_test_prioritization" />
         <item itemvalue="Python.demo_0W_structured_results" />
         <item itemvalue="Python.solution_03_code_generation_validation" />
-        <item itemvalue="Python.solution_02_test_categories_prioritization" />
+        <item itemvalue="Python.solution_021_test_categories" />
         <item itemvalue="Python.solution_01_api_analysis_suggestions" />
       </list>
     </recent_temporary>
@@ -206,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755527747457</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added structured results demo">
+      <option name="closed" value="true" />
+      <created>1755528358894</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1755528358894</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +261,7 @@
     <MESSAGE value="updated todos/outline" />
     <MESSAGE value="Removed prompts." />
     <MESSAGE value="Changed prompts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed prompts." />
+    <MESSAGE value="Added structured results demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added structured results demo" />
   </component>
 </project>

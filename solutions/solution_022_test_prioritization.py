@@ -90,8 +90,8 @@ class TestIdeaGenerator:
         - Essential functionality
 
         Return just the prioritized list with numbers:
-        1. Most important test
-        2. Second most important test
+        1. Most important test name, category
+        2. Second most important test name, category
         etc.
         """
         response = self.client.models.generate_content(
@@ -132,14 +132,9 @@ def main():
     # Generate test categories
     test_ideas = generator.generate_test_categories(endpoint)
 
-    print("\nTest Ideas by Category:")
-    for category, ideas in test_ideas.items():
-        print(f"\n{category.upper().replace('_', ' ')}:")
-        for idea in ideas:
-            print(f"  - {idea}")
-
     # Prioritize tests
     prioritized = generator.prioritize_tests(test_ideas)
+
 
     print("\nPrioritized Test Order:")
     for i, test in enumerate(prioritized, 1):

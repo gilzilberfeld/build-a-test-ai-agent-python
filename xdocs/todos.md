@@ -8,10 +8,10 @@
 ### v demo 2 looks like exercise 1.2.
 ### x will need to separate the two parts, both exercise and solution
 
-## ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
+## v ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
 ### v Requires a demo.
-### The solution of the prioritization shows numbers, not the test names. It could be what we want, but needs to check.
-### both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
+### v The solution of the prioritization shows numbers, not the test names. It could be what we want, but needs to check.
+### v both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
 
 ## ex3 -> Has the generation part by LLM and validation.
 ### The generation is straight forward prompt.
