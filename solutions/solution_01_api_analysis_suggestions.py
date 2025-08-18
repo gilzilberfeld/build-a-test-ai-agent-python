@@ -1,5 +1,5 @@
 """
-Solution 1: API Analysis Agent - Complete Implementation
+Solution 1: API Analysis Agent - exercises 1.1 and 1.2
 """
 
 import google.genai as genai

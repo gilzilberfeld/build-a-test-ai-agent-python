@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="">
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="updated todos/outline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_02_test_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_02_test_idea_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_03_code_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_03_result_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_02_test_ideas.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_02_test_categories_prioritization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_03_code_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_03_code_generation_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_04_test_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_04_test_execution_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_05_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_05_validation_detect_anomalies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_02_test_ideas.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_02_test_categories_prioritization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_03_code_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_03_code_generation_validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_04_test_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_04_test_execution_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_05_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_05_validation_detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,22 +18,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gilzilberfeld"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gilzilberfeld&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gilzilberfeld/build-a-test-ai-agent-python.git",
-    "accountId": "7edc7939-d564-4202-a55e-33923567e0bc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gilzilberfeld/build-a-test-ai-agent-python.git&quot;,
+    &quot;accountId&quot;: &quot;7edc7939-d564-4202-a55e-33923567e0bc&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="30obGNWVjSf3pIvF2AZ8q0rYBS2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -56,9 +46,15 @@
     "Python.solution_03_code_generation_validation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/GitHub/Workshops/build-a-test-agent-python/exercises"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GitHub\Workshops\build-a-test-agent-python\exercises" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.solution_03_code_generation_validation">
     <configuration name="solution_01_api_analysis_suggestions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
@@ -137,7 +133,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-4c141bd692a7-e2d783800521-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26927.90" />
+        <option value="bundled-python-sdk-03e874896e21-d902c0275401-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-252.23892.439" />
       </set>
     </attachedChunks>
   </component>
@@ -149,6 +145,39 @@
       <option name="presentableId" value="Default" />
       <updated>1754296778407</updated>
     </task>
+    <task id="LOCAL-00001" summary="Renaming and todos/outline">
+      <option name="closed" value="true" />
+      <created>1754318038580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754318038580</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated todos/outline">
+      <option name="closed" value="true" />
+      <created>1754318141903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754318141903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Renaming and todos/outline" />
+    <MESSAGE value="updated todos/outline" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated todos/outline" />
   </component>
 </project>

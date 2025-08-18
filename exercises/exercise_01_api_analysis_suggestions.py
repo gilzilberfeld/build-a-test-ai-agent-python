@@ -17,7 +17,7 @@ class APIAnalysisAgent:
 
     def analyze_api_endpoint(self, endpoint_info):
         """
-        TODO: Create a prompt to analyze an API endpoint
+        TODO: Call the model to analyze an API endpoint
 
         Args:
             endpoint_info: Dict with 'method', 'path', 'description'
@@ -28,16 +28,13 @@ class APIAnalysisAgent:
         # HINT: Create a prompt that asks the AI to analyze the endpoint
         # Consider what kind of testing might be needed
 
-        prompt = f"""
-        Analyze this API endpoint:
-        Method: {endpoint_info['method']}
-        Path: {endpoint_info['path']}
-        Description: {endpoint_info['description']}
-
         # TODO: Add your analysis prompt here
+        prompt = f"""
+            
         """
 
         # TODO: Make the API call
+
         # TODO: Return the response
 
         return "TODO: Implement API analysis"
@@ -53,6 +50,10 @@ class APIAnalysisAgent:
             List of testing suggestions
         """
         # TODO: Create prompt for testing suggestions
+        prompt = f"""
+
+                """
+
         # TODO: Make API call
         # TODO: Parse response into list
 

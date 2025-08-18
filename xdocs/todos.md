@@ -1,9 +1,9 @@
 # Todos & Outline
 
-## Demo 1 (simple agent)
-## ex1 -> Separate into two parts: 1. analysis, 2. Test case suggestions
-### part 1.1 is the introduction.
-### Maybe let them write the prompt themselves.
+## v Demo 1 (simple agent)
+## v ex1 -> Separate into two parts: 1. analysis, 2. Test case suggestions
+### v part 1.1 is the introduction.
+### v Maybe let them write the prompt themselves.
 
 ## Demo 2 (test idea generation, maybe before 1.2)
 ### demo 2 looks like exercise 1.2.
@@ -35,7 +35,9 @@
 Possible outline:
 1. Introduction
 2. Demo 1: Simple Agent (learn: prompting)
-3. Exercise 1.1: Analysis 
+3. Exercise 1.1: Analysis
+
+
 4. Demo 2: Test Idea Generation (learn: specific prompting)
 5. Exercise 1.2: Test Case Suggestions
 6. Demo X: Structured Results (learn: structured results)
