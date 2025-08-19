@@ -49,9 +49,9 @@ Possible outline:
 14. Exercise 6 Whole process.
 
 Advanced Topics:
-15. 
-16. Exercise 2.2: Prioritization
-17. Demo Z: For Validation
+15. Exercise 2.2: Prioritization
+16. Demo Z: For Validation
+17. 
 17. Exercise 3.2: code Validation
 19. Exercise 5.1: Result validation
 20. Exercise 5.2: Anomalies
