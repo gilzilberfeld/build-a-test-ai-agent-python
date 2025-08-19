@@ -8,7 +8,6 @@ import time
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY
-from utils.test_runner import execute_code_safely
 
 
 class TestExecutionEngine:

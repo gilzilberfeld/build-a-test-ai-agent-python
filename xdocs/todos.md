@@ -41,9 +41,9 @@ Possible outline:
 7. Exercise 2.1: Categorization
 8. Demo X: Code generation (learn: code generation)
 9. Exercise 3.1: Test Code Generation
-10. 
 10. Demo Y: Code Execution (learn: code execution)
-11. Exercise 4.1: Code Execution
+11. 
+12. Exercise 4.1: Code Execution
 12. Demo 3: Result Analysis (learn: analyze results)
 13. Exercise 4.2: Result Analysis
 14. Demo 4: Whole Process (learn: putting it all together)
