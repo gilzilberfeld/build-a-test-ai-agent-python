@@ -76,7 +76,11 @@ class APITestAgent:
             config=self.config
         )
 
-        return response.text
+        # Remove the python code wrapper
+        code = response.text.strip().replace("```python", "").replace("```", "")
+
+        # Clean up the response to remove any code block formatting
+        return code
 
     def execute_test_code(self, test_code):
         """Execute test code and return results"""

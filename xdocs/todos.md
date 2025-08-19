@@ -43,13 +43,13 @@ Possible outline:
 9. Exercise 3.1: Test Code Generation
 10. Demo Y: Code Execution (learn: code execution)
 11. Exercise 4.1: Code Execution
-12. 
 12. Demo 3: Result Analysis (learn: analyze results)
-13. Exercise 4.2: Result Analysis
-14. Demo 4: Whole Process (learn: putting it all together)
-15. Exercise 6 Whole process.
+12. Exercise 4.2: Result Analysis
+13. Demo 4: Whole Process (learn: putting it all together)
+14. Exercise 6 Whole process.
 
 Advanced Topics:
+15. 
 16. Exercise 2.2: Prioritization
 17. Demo Z: For Validation
 17. Exercise 3.2: code Validation

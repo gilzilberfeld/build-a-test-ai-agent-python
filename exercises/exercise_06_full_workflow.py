@@ -23,11 +23,9 @@ class APITestAgent:
         Workflow:
         1. Analyze each endpoint
         2. Generate test ideas
-        3. Prioritize tests
-        4. Generate test code
-        5. Execute tests
-        6. Validate results
-        7. Generate report
+        3. Generate test code
+        4. Execute tests
+        5. Generate report
 
         Args:
             api_endpoints: List of API endpoints to test

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="added execution demo">
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_042_test_execution_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_042_test_execution_analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_04_test_execution_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_041_test_execution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_04_test_execution_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_041_test_execution.py" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Separated execution and analysis exercises &amp; solution">
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_06_full_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_06_full_workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_06_full_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_06_full_workflow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +47,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.demo_04_complete_workflow.executor": "Run",
     "Python.demo_0W_structured_results.executor": "Run",
     "Python.demo_0X_generation.executor": "Run",
     "Python.demo_0Y_execute_code.executor": "Run",
@@ -63,6 +61,7 @@
     "Python.solution_041_test_execution.executor": "Run",
     "Python.solution_042_test_execution_analysis (1).executor": "Run",
     "Python.solution_042_test_execution_analysis.executor": "Run",
+    "Python.solution_06_full_workflow.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -76,8 +75,8 @@
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.solution_042_test_execution_analysis (1)">
-    <configuration name="demo_0Y_execute_code" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.solution_06_full_workflow">
+    <configuration name="demo_04_complete_workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -90,29 +89,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_0Y_execute_code.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="solution_032_code_generation_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="build-a-test-agent-python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_032_code_generation_validation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_04_complete_workflow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,13 +164,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="solution_06_full_workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="build-a-test-agent-python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_06_full_workflow.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.solution_06_full_workflow" />
+        <item itemvalue="Python.demo_04_complete_workflow" />
         <item itemvalue="Python.solution_042_test_execution_analysis (1)" />
         <item itemvalue="Python.solution_041_test_execution" />
         <item itemvalue="Python.solution_042_test_execution_analysis" />
-        <item itemvalue="Python.demo_0Y_execute_code" />
-        <item itemvalue="Python.solution_032_code_generation_validation" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755586620105</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Separated execution and analysis exercises &amp; solution">
+      <option name="closed" value="true" />
+      <created>1755587717393</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1755587717393</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +306,7 @@
     <MESSAGE value="separated categorization and prioritization" />
     <MESSAGE value="separated generation and validation added generation demo" />
     <MESSAGE value="added execution demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="added execution demo" />
+    <MESSAGE value="Separated execution and analysis exercises &amp; solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated execution and analysis exercises &amp; solution" />
   </component>
 </project>
