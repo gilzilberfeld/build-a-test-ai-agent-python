@@ -56,41 +56,6 @@ class TestExecutionEngine:
                 "error": str(e)
             }
 
-    def analyze_test_results(self, results):
-        """
-        Use AI to analyze test results and provide insights
-        """
-        prompt = f"""
-        Analyze these API test results and provide insights:
-
-        Execution Success: {results.get('execution_success', False)}
-        Test Results: {json.dumps(results.get('test_results', {}), indent=2)}
-        Error: {results.get('error', 'None')}
-
-        Provide:
-        1. Overall assessment (passed/failed/warning)
-        2. Key findings
-        3. Potential issues or concerns
-        4. Recommendations for next steps
-
-        Keep response concise and actionable.
-        """
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=[
-                types.Content(
-                    role="user",
-                    parts=[types.Part.from_text(text = "You are an expert API test analyst. Provide clear, actionable insights.")]
-                ),
-                types.Content(
-                    role="user",
-                    parts=[types.Part.from_text(text = prompt)]
-                )
-            ],
-            config=self.config
-        )
-        return response.text
-
 
 def main():
     print("=== Solution 4: Test Execution Engine ===")
@@ -154,10 +119,6 @@ def test_api_endpoint():
     print(f"\nExecution Results:")
     print(json.dumps(results, indent=2))
 
-    # Analyze results with AI
-    analysis = engine.analyze_test_results(results)
-    print(f"\nAI Analysis:")
-    print(analysis)
 
 
 if __name__ == "__main__":

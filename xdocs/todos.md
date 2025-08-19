@@ -21,9 +21,9 @@
 ### v Solution for Validation also includes execution.  Need to do something about it
 
 ## Demo 3 (result analysis)
-### ex4 -> Has the code execution part, and analysis results
-### Demo 3 covers the analysis, need demo for code execution.
-### Can also separated.
+### v ex4 -> Has the code execution part, and analysis results
+### v Demo 3 covers the analysis, need demo for code execution.
+### v Can also separated.
 
 ## ex5-> validation and anomalies. Can be deferred to later.
 
@@ -42,8 +42,8 @@ Possible outline:
 8. Demo X: Code generation (learn: code generation)
 9. Exercise 3.1: Test Code Generation
 10. Demo Y: Code Execution (learn: code execution)
-11. 
-12. Exercise 4.1: Code Execution
+11. Exercise 4.1: Code Execution
+12. 
 12. Demo 3: Result Analysis (learn: analyze results)
 13. Exercise 4.2: Result Analysis
 14. Demo 4: Whole Process (learn: putting it all together)

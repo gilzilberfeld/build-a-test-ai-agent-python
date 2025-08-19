@@ -35,21 +35,6 @@ class TestExecutionEngine:
             "error": "TODO: Implement test execution"
         }
 
-    def analyze_test_results(self, results):
-        """
-        TODO: Use AI to analyze test results and provide insights
-
-        Args:
-            results: Dict with test execution results
-
-        Returns:
-            String with AI analysis of results
-        """
-        # TODO: Create prompt for result analysis
-        # TODO: Make API call
-        # TODO: Return analysis
-
-        return "TODO: Implement result analysis"
 def main():
     print("=== Exercise 4: Test Execution Engine ===")
 
@@ -88,9 +73,6 @@ print(f"Test completed: {test_result}")
     print(f"\nExecution Results:")
     print(json.dumps(results, indent=2))
 
-    # TODO: Analyze results with AI
-    analysis = engine.analyze_test_results(results)
-    print(f"\nAI Analysis: {analysis}")
 
 
 if __name__ == "__main__":
