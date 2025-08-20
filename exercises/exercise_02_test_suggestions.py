@@ -1,6 +1,7 @@
 """
-Exercise 1: API Analysis Agent
-Your task: Complete the missing methods to analyze API endpoints
+Exercise 2: API Analysis Agent
+Your task: Complete the missing method to create test suggestions for the analyzed
+            API endpoints
 """
 
 import google.genai as genai
@@ -50,7 +51,7 @@ class APIAnalysisAgent:
         )
         return response.text
 
-    def get_testing_suggestions(self, endpoint_info):
+    def get_test_suggestions(self, endpoint_info):
         """
         TODO: Generate testing suggestions for an endpoint
 
@@ -60,19 +61,17 @@ class APIAnalysisAgent:
         Returns:
             List of testing suggestions
         """
-        # TODO: Create prompt for testing suggestions
+        # TODO: Create prompt for test suggestions
         prompt = f"""
 
                 """
 
-        # TODO: Make API call
-        # TODO: Parse response into list
-
+        # TODO: Call the model and return suggestions as list
         return ["TODO: Implement testing suggestions"]
 
 
 def main():
-    print("=== Exercise 1: API Analysis Agent ===")
+    print("=== Exercise 2: API Analysis Agent ===")
 
     # Get sample API
     sample_api = get_sample_api()
@@ -86,7 +85,7 @@ def main():
     print(f"\nAnalysis: {analysis}")
 
     # TODO: Get testing suggestions
-    suggestions = agent.get_testing_suggestions(endpoint)
+    suggestions = agent.get_test_suggestions(endpoint)
     print(f"\nTesting Suggestions:")
     for i, suggestion in enumerate(suggestions, 1):
         print(f"{i}. {suggestion}")

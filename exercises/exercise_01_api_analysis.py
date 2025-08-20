@@ -1,6 +1,6 @@
 """
 Exercise 1: API Analysis Agent
-Your task: Complete the missing methods to analyze API endpoints
+Your task: Complete the missing method to analyze API endpoints
 """
 
 import google.genai as genai
@@ -9,7 +9,7 @@ from config import GEMINI_API_KEY
 from utils.sample_apis import get_sample_api
 
 
-class APIAnalysisAgent:
+class APIAnalyzer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
         self.model_name = 'gemini-1.5-flash-latest'
@@ -33,10 +33,7 @@ class APIAnalysisAgent:
             
         """
 
-        # TODO: Make the API call
-
-        # TODO: Return the response
-
+        # TODO: Call the model and return the response
         return "TODO: Implement API analysis"
 
 
@@ -52,7 +49,7 @@ def main():
     print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
 
     # TODO: Create agent instance
-    agent = APIAnalysisAgent(GEMINI_API_KEY)
+    agent = APIAnalyzer(GEMINI_API_KEY)
 
     # TODO: Analyze the endpoint
     analysis = agent.analyze_api_endpoint(endpoint)

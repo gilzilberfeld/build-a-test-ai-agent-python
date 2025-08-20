@@ -1,5 +1,5 @@
 """
-Exercise 6: Complete API Test Agent
+Exercise 7: Complete API Test Agent
 Your task: Integrate all components into a complete workflow
 """
 
@@ -23,9 +23,10 @@ class APITestAgent:
         Workflow:
         1. Analyze each endpoint
         2. Generate test ideas
-        3. Generate test code
-        4. Execute tests
-        5. Generate report
+        3. Categorize the tests
+        4. Generate test code
+        5. Execute tests
+        6. Generate report
 
         Args:
             api_endpoints: List of API endpoints to test
@@ -63,7 +64,7 @@ class APITestAgent:
 
 
 def main():
-    print("=== Exercise 6: Complete API Test Agent ===")
+    print("=== Exercise 7: Complete API Test Agent ===")
 
     agent = APITestAgent(GEMINI_API_KEY)
 

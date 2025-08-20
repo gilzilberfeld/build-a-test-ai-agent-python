@@ -1,6 +1,6 @@
 """
-Exercise 4: Test Execution Engine
-Your task: Execute generated test code safely and capture results
+Exercise 5: Test Execution Engine
+Your task: Execute generated test code and capture results
 """
 
 import json
@@ -26,7 +26,7 @@ class TestExecutionEngine:
         Returns:
             Dict with execution results
         """
-        # TODO: Use execute_code_safely from utils
+        # TODO: Execute the test code
         # TODO: Format results properly
         # TODO: Handle execution errors
 
@@ -36,7 +36,7 @@ class TestExecutionEngine:
         }
 
 def main():
-    print("=== Exercise 4: Test Execution Engine ===")
+    print("=== Exercise 6: Test Execution Engine ===")
 
     engine = TestExecutionEngine(GEMINI_API_KEY)
 

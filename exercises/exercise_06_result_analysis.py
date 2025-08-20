@@ -1,6 +1,6 @@
 """
-Exercise 4: Test Execution Engine
-Your task: Execute generated test code safely and capture results
+Exercise 6: Test Execution Result Analysis
+Your task: Execute generated test code safely and send results to the model
 """
 
 import requests
@@ -68,13 +68,13 @@ class TestExecutionEngine:
             String with AI analysis of results
         """
         # TODO: Create prompt for result analysis
-        # TODO: Make API call
+        # TODO: Call the model
         # TODO: Return analysis
 
         return "TODO: Implement result analysis"
 
 def main():
-    print("=== Exercise 4: Test Execution Engine ===")
+    print("=== Exercise 6: Test Execution Engine ===")
 
     engine = TestExecutionEngine(GEMINI_API_KEY)
 

@@ -1,6 +1,6 @@
 """
-Exercise 5: Response Validation
-Your task: Implement AI-powered response validation
+Exercise 10: Response Validation
+Your task: Validate the response structure of API calls using AI
 """
 
 import requests
@@ -28,7 +28,7 @@ class ResponseValidator:
             Dict with validation results
         """
         # TODO: Create validation prompt
-        # TODO: Make API call
+        # TODO: Call the model
         # TODO: Parse validation results
 
         return {
@@ -37,7 +37,7 @@ class ResponseValidator:
         }
 
 def main():
-    print("=== Exercise 5: Response Validation ===")
+    print("=== Exercise 10: Response Validation ===")
 
     validator = ResponseValidator(GEMINI_API_KEY)
 

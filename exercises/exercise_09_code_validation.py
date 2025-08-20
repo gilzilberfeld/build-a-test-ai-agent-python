@@ -1,6 +1,6 @@
 """
-Exercise 3: Test Code Generation
-Your task: Generate executable Python test code
+Exercise 9: Generated Code Validation
+Your task: Make sure the generated code is valid and executable
 """
 
 import google.genai as genai
@@ -78,7 +78,7 @@ class TestCodeGenerator:
 
 
 def main():
-    print("=== Exercise 3: Test Code Generation ===")
+    print("=== Exercise 9: Generated Code Validation ===")
 
     generator = TestCodeGenerator(GEMINI_API_KEY)
 

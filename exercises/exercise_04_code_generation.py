@@ -1,6 +1,6 @@
 """
-Exercise 3: Test Code Generation
-Your task: Generate executable Python test code
+Exercise 4: Test Code Generation
+Your task: Generate Python test code
 """
 
 import google.genai as genai
@@ -36,14 +36,13 @@ class TestCodeGenerator:
         
         """
 
-        # TODO: Make API call
-        # TODO: Extract code from response
+        # TODO: Call the model and extract code from re
 
         return "# TODO: Implement code generation"
 
 
 def main():
-    print("=== Exercise 3: Test Code Generation ===")
+    print("=== Exercise 4: Test Code Generation ===")
 
     generator = TestCodeGenerator(GEMINI_API_KEY)
 

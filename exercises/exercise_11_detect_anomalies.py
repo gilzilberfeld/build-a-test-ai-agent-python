@@ -1,6 +1,6 @@
 """
-Exercise 5: Response Validation
-Your task: Implement AI-powered response validation
+Exercise 11: Detect anomlies
+Your task: Identify anomalies in the response
 """
 
 import requests
@@ -98,7 +98,7 @@ class ResponseValidator:
             List of detected anomalies
         """
         # TODO: Create anomaly detection prompt
-        # TODO: Make API call
+        # TODO: Call the model
         # TODO: Parse anomalies
 
         return ["TODO: Implement anomaly detection"]

@@ -1,6 +1,6 @@
 """
-Exercise 2: Test Idea Generation
-Your task: Generate comprehensive test ideas for API endpoints
+Exercise 8: Test Prioritization
+Your task: Prioritize the tests after categorization
 """
 
 import google.genai as genai
@@ -9,7 +9,7 @@ from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
-class TestIdeaGenerator:
+class TestCategorizer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
         self.model_name = 'gemini-1.5-flash-latest'
@@ -83,16 +83,16 @@ class TestIdeaGenerator:
             List of prioritized test ideas
         """
         # TODO: Create prioritization prompt
-        # TODO: Make API call
+        # TODO: Call the model
         # TODO: Return prioritized list
 
         return ["TODO: Implement test prioritization"]
 
 
 def main():
-    print("=== Exercise 2: Test Idea Generation ===")
+    print("=== Exercise 8: Test Idea Generation ===")
 
-    generator = TestIdeaGenerator(GEMINI_API_KEY)
+    generator = TestCategorizer(GEMINI_API_KEY)
 
     # Use a more complex endpoint
     endpoint = SAMPLE_ENDPOINTS[0]["endpoints"][1]  # GET /posts/1
