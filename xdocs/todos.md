@@ -52,6 +52,7 @@ Advanced Topics:
 15. Exercise 2.2: Prioritization
 16. Demo Z: For Validation
 17. Exercise 3.2: code Validation
-18. 
-19. Exercise 5.1: Result validation
-20. Exercise 5.2: Anomalies
+18. Exercise 5.1: Response validation 
+19. Exercise 5.2: Anomalies
+20. 
+21. Exercise 7 Full process

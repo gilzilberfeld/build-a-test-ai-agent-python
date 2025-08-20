@@ -36,23 +36,6 @@ class ResponseValidator:
             "issues": ["TODO: Implement structure validation"]
         }
 
-    def detect_anomalies(self, response_data):
-        """
-        TODO: Use AI to detect anomalies in API responses
-
-        Args:
-            response_data: API response to analyze
-
-        Returns:
-            List of detected anomalies
-        """
-        # TODO: Create anomaly detection prompt
-        # TODO: Make API call
-        # TODO: Parse anomalies
-
-        return ["TODO: Implement anomaly detection"]
-
-
 def main():
     print("=== Exercise 5: Response Validation ===")
 
@@ -81,13 +64,6 @@ def main():
         print("Issues found:")
         for issue in validation_results['issues']:
             print(f"  - {issue}")
-
-    # TODO: Detect anomalies
-    anomalies = validator.detect_anomalies(response_data)
-
-    print(f"\nAnomalies Detected:")
-    for anomaly in anomalies:
-        print(f"  - {anomaly}")
 
 
 if __name__ == "__main__":
