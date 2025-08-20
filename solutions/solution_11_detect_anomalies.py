@@ -1,5 +1,6 @@
 """
-Solution 5: Response Validation - Complete Implementation
+Solution 11: Detect anomalies
+Your task: Identify anomalies in the response
 """
 
 import requests
@@ -139,7 +140,7 @@ class ResponseValidator:
 
 
 def main():
-    print("=== Solution 5: Response Validation ===")
+    print("=== Solution 11: Response Validation ===")
 
     validator = ResponseValidator(GEMINI_API_KEY)
 

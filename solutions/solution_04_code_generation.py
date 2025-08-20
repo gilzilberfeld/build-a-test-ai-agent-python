@@ -1,5 +1,6 @@
 """
-Solution 3: Test Code Generation - Complete Implementation
+Solution 4: Test Code Generation
+Your task: Generate Python test code
 """
 
 import ast
@@ -61,7 +62,7 @@ class TestCodeGenerator:
 
 
 def main():
-    print("=== Solution 3: Test Code Generation ===")
+    print("=== Solution 4: Test Code Generation ===")
 
     generator = TestCodeGenerator(GEMINI_API_KEY)
 

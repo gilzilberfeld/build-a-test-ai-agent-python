@@ -1,5 +1,7 @@
 """
-Solution 1: API Analysis Agent - exercises 1.1 and 1.2
+Solution 2: API Analysis Agent
+Your task: Create test suggestions for the analyzed
+            API endpoints
 """
 
 import google.genai as genai
@@ -8,7 +10,7 @@ from config import GEMINI_API_KEY
 from utils.sample_apis import get_sample_api
 
 
-class APIAnalysisAgent:
+class APIAnalyzer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
         self.model_name = 'gemini-1.5-flash-latest'
@@ -49,7 +51,7 @@ class APIAnalysisAgent:
         )
         return response.text
 
-    def get_testing_suggestions(self, endpoint_info):
+    def get_test_suggestions(self, endpoint_info):
         """
         Generate specific testing suggestions for an endpoint
         """
@@ -95,7 +97,7 @@ class APIAnalysisAgent:
 
 
 def main():
-    print("=== Solution 1: API Analysis Agent ===")
+    print("=== Exercise 2: API Analyzer ===")
 
     # Get sample API
     sample_api = get_sample_api()
@@ -104,14 +106,14 @@ def main():
     print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
 
     # Create agent instance
-    agent = APIAnalysisAgent(GEMINI_API_KEY)
+    agent = APIAnalyzer(GEMINI_API_KEY)
 
     # Analyze the endpoint
     analysis = agent.analyze_api_endpoint(endpoint)
     print(f"\nAnalysis: {analysis}")
 
     # Get testing suggestions
-    suggestions = agent.get_testing_suggestions(endpoint)
+    suggestions = agent.get_test_suggestions(endpoint)
     print(f"\nTesting Suggestions:")
     for i, suggestion in enumerate(suggestions, 1):
         print(f"{i}. {suggestion}")

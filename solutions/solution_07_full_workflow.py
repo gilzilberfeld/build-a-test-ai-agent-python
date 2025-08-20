@@ -1,5 +1,6 @@
 """
-Solution 6: Complete API Test Agent - Full Implementation
+Solution 7: Complete API Test Agent
+Your task: Integrate all components into a complete workflow
 """
 
 import requests
@@ -210,7 +211,7 @@ class APITestAgent:
 
 
 def main():
-    print("=== Solution 6: Complete API Test Agent ===")
+    print("=== Solution 7: Complete API Test Agent ===")
 
     agent = APITestAgent(GEMINI_API_KEY)
 

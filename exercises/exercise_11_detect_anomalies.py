@@ -1,5 +1,5 @@
 """
-Exercise 11: Detect anomlies
+Exercise 11: Detect anomalies
 Your task: Identify anomalies in the response
 """
 
@@ -105,7 +105,7 @@ class ResponseValidator:
 
 
 def main():
-    print("=== Exercise 5: Response Validation ===")
+    print("=== Exercise 11: Response Validation ===")
 
     validator = ResponseValidator(GEMINI_API_KEY)
 

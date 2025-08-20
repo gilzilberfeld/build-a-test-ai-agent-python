@@ -1,5 +1,6 @@
 """
-Solution 2: Test Idea Generation - Complete Implementation
+Solution 8: Test Prioritization
+Your task: Prioritize the tests after categorization
 """
 
 import google.genai as genai
@@ -8,7 +9,7 @@ from config import GEMINI_API_KEY
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
-class TestIdeaGenerator:
+class TestCategorizer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
         self.model_name = 'gemini-1.5-flash-latest'
@@ -120,24 +121,24 @@ class TestIdeaGenerator:
 
 
 def main():
-    print("=== Solution 2: Test Idea Generation ===")
+    print("=== Solution 8: Test Prioritization ===")
 
-    generator = TestIdeaGenerator(GEMINI_API_KEY)
+    generator = TestCategorizer(GEMINI_API_KEY)
 
     # Use a more complex endpoint
     endpoint = SAMPLE_ENDPOINTS[0]["endpoints"][1]  # GET /posts/1
 
-    print(f"Generating test ideas for: {endpoint['method']} {endpoint['path']}")
+    print(f"Generating test categories for: {endpoint['method']} {endpoint['path']}")
 
     # Generate test categories
-    test_ideas = generator.generate_test_categories(endpoint)
+    categorized_tests = generator.generate_test_categories(endpoint)
 
     # Prioritize tests
-    prioritized = generator.prioritize_tests(test_ideas)
+    prioritized_tests = generator.prioritize_tests(categorized_tests)
 
 
     print("\nPrioritized Test Order:")
-    for i, test in enumerate(prioritized, 1):
+    for i, test in enumerate(prioritized_tests, 1):
         print(f"{i}. {test}")
 
 

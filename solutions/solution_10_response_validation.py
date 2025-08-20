@@ -1,5 +1,6 @@
 """
-Solution 5: Response Validation - Complete Implementation
+Solution 10: Response Validation
+Your task: Validate the response structure of API calls using AI
 """
 
 import requests
@@ -88,7 +89,7 @@ class ResponseValidator:
 
 
 def main():
-    print("=== Solution 5: Response Validation ===")
+    print("=== Solution 10: Response Validation ===")
 
     validator = ResponseValidator(GEMINI_API_KEY)
 

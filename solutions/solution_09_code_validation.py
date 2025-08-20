@@ -1,5 +1,6 @@
 """
-Solution 3: Test Code Generation - Complete Implementation
+Solution 9: Generated Code Validation
+Your task: Make sure the generated code is valid and executable
 """
 
 import ast
@@ -87,7 +88,7 @@ class TestCodeGenerator:
 
 
 def main():
-    print("=== Solution 3: Test Code Generation ===")
+    print("=== Solution 9: Code Validation ===")
 
     generator = TestCodeGenerator(GEMINI_API_KEY)
 

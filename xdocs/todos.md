@@ -1,35 +1,9 @@
 # Todos & Outline
 
-## v Demo 1 (simple agent)
-## v ex1 -> Separate into two parts: 1. analysis, 2. Test case suggestions
-### v part 1.1 is the introduction.
-### v Maybe let them write the prompt themselves.
-## v Demo 2 (test idea generation, maybe before 1.2)
-### v demo 2 looks like exercise 1.2.
-### x will need to separate the two parts, both exercise and solution
+## full solution needs rewrite to use existing modules.
+## Needs twice
 
-## v ex2 -> Can also separate into two parts: 1. Categorization, 2. Prioritization
-### v Requires a demo.
-### v The solution of the prioritization shows numbers, not the test names. It could be what we want, but needs to check.
-### v both can be deferred to later, but if we do, we'll need a structured demo/exercise before the complete.
-
-## ex3 -> Has the generation part by LLM and validation.
-### v The generation is straight forward prompt. The execution is the tricky part.  Got demo
-### v The validation part requires AST, may leave it out. Also it may fail incorrectly
-### x Also, need a skip option if the generated code is not valid.
-### v If deferred need a demo, Also need to separate 
-### v Solution for Validation also includes execution.  Need to do something about it
-
-## Demo 3 (result analysis)
-### v ex4 -> Has the code execution part, and analysis results
-### v Demo 3 covers the analysis, need demo for code execution.
-### v Can also separated.
-
-## ex5-> validation and anomalies. Can be deferred to later.
-
-## v Demo 4 (whole process)
-## v ex6 -> The whole process, from test case generation to execution and analysis.
-### It doesen't use the modules created before. Might want to use the modules.
+### May need a skip option if the generated code is not valid.
 
 Possible outline:
 1. Introduction
@@ -46,7 +20,7 @@ Possible outline:
 12. Demo 6: Result Analysis (learn: analyze results)
 12. Exercise 6: Result Analysis
 13. Demo 7: Whole Process (learn: putting it all together)
-14. Exercise 7 Whole process.
+14. Exercise 7 Whole process. 
 
 Advanced Topics:
 15. Exercise 8: Prioritization

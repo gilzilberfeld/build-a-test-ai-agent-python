@@ -1,5 +1,5 @@
 """
-Exercise 1: API Analysis Agent
+Exercise 1: API Analyzer
 Your task: Complete the missing method to analyze API endpoints
 """
 

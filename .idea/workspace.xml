@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Renumbered">
-      <change beforePath="$PROJECT_DIR$/demos/demo_01_simple_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_01_simple_agent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_03_structured_results.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_03_structured_results.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_04_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_04_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_05_execute_code.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_05_execute_code.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demos/demo_06_result_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/demos/demo_06_result_analysis.py" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Updated descriptions and numbering">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_01_api_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_11_detect_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_11_detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_01_api_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_02_test_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_02_test_suggestions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_03_test_categories.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_03_test_categories.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_04_code_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_04_code_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_05_test_execution.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_05_test_execution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_06_result_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_06_result_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_07_full_workflow.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_07_full_workflow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_08_test_prioritization.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_08_test_prioritization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_09_code_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_09_code_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_10_response_validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_10_response_validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_11_detect_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_11_detect_anomalies.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xdocs/todos.md" beforeDir="false" afterPath="$PROJECT_DIR$/xdocs/todos.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,19 +68,29 @@
     "Python.exercise_031_code_generation.executor": "Run",
     "Python.exercise_032_code_validation.executor": "Run",
     "Python.solution_011_api_analysis.executor": "Run",
+    "Python.solution_01_api_analysis (1).executor": "Run",
     "Python.solution_01_api_analysis_suggestions.executor": "Run",
     "Python.solution_022_test_prioritization.executor": "Run",
     "Python.solution_02_test_categories_prioritization.executor": "Run",
+    "Python.solution_02_test_suggestions.executor": "Run",
     "Python.solution_031_code_generation (1).executor": "Run",
     "Python.solution_032_code_generation_validation.executor": "Run",
     "Python.solution_032_code_validation.executor": "Run",
     "Python.solution_03_code_generation_validation.executor": "Run",
+    "Python.solution_03_test_categories.executor": "Run",
     "Python.solution_041_test_execution.executor": "Run",
     "Python.solution_042_test_execution_analysis (1).executor": "Run",
     "Python.solution_042_test_execution_analysis.executor": "Run",
+    "Python.solution_04_code_generation.executor": "Run",
     "Python.solution_051_response_validation.executor": "Run",
     "Python.solution_052_detect_anomalies.executor": "Run",
+    "Python.solution_05_test_execution.executor": "Run",
     "Python.solution_06_full_workflow.executor": "Run",
+    "Python.solution_06_result_analysis.executor": "Run",
+    "Python.solution_07_full_workflow.executor": "Run",
+    "Python.solution_09_code_validation.executor": "Run",
+    "Python.solution_10_response_validation.executor": "Run",
+    "Python.solution_11_detect_anomalies.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -84,30 +104,8 @@
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.exercise_08_test_prioritization">
-    <configuration name="exercise_08_test_prioritization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="build-a-test-agent-python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exercises" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\exercises\exercise_08_test_prioritization.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="solution_01_api_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.solution_11_detect_anomalies">
+    <configuration name="solution_06_result_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,7 +118,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\solutions\solution_01_api_analysis.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_06_result_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="solution_07_full_workflow" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="build-a-test-agent-python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_07_full_workflow.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,7 +162,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\solutions\solution_09_code_validation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_09_code_validation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -164,7 +184,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\solutions\solution_10_response_validation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_10_response_validation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,7 +206,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\GitHub\Workshops\build-a-test-agent-python\solutions\solution_11_detect_anomalies.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_11_detect_anomalies.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.exercise_08_test_prioritization" />
-        <item itemvalue="Python.solution_01_api_analysis" />
         <item itemvalue="Python.solution_11_detect_anomalies" />
         <item itemvalue="Python.solution_10_response_validation" />
         <item itemvalue="Python.solution_09_code_validation" />
+        <item itemvalue="Python.solution_07_full_workflow" />
+        <item itemvalue="Python.solution_06_result_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +360,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755677627377</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated comment description in demos">
+      <option name="closed" value="true" />
+      <created>1755678293490</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1755678293490</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated descriptions and numbering">
+      <option name="closed" value="true" />
+      <created>1755680073027</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1755680073027</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -370,6 +406,8 @@
     <MESSAGE value="Response validation and anomalies" />
     <MESSAGE value="Split 1" />
     <MESSAGE value="Renumbered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renumbered" />
+    <MESSAGE value="Updated comment description in demos" />
+    <MESSAGE value="Updated descriptions and numbering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated descriptions and numbering" />
   </component>
 </project>
