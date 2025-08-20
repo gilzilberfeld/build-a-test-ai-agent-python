@@ -5,14 +5,14 @@ Your task: Prioritize the tests after categorization
 
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class TestCategorizer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(max_output_tokens=200)
 
     def generate_test_categories(self, endpoint_info):

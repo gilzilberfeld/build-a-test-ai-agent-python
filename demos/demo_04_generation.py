@@ -4,12 +4,13 @@ Demo 4: Test Code Generation - Shows how AI can generate code
 
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
+
 
 class HelloWorldCodeGenAgent:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(max_output_tokens=100)
 
     def generate_hello_function(self, name):
@@ -32,9 +33,9 @@ def main():
     name = "Gil"
     code = agent.generate_hello_function(name)
     print("Generated function code:\n")
-    print(code)
     # Remove the python code wrapper
     code = code.strip().replace("```python", "").replace("```", "")
+    print(code)
 
 if __name__ == "__main__":
     main()

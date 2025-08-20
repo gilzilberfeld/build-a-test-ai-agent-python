@@ -5,15 +5,15 @@ Demo 3: Structured results - Shows how AI can return easily parsable responses
 
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 import json
 
 class StructuredAgent:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(
-            max_output_tokens=300
+            max_output_tokens=8192
         )
 
     def think(self, question):
@@ -31,7 +31,8 @@ class StructuredAgent:
             config=self.config
         )
         try:
-            result = json.loads(response.text)
+            answer = response.text.strip().replace("```json", "").replace("```", "")
+            result = json.loads(answer)
         except Exception:
             result = {"error": "Failed to parse response as JSON", "raw_response": response.text}
         return result
@@ -44,6 +45,7 @@ def main():
     print("\nAgent thinking...")
 
     answer = agent.think(question)
+
     print("\nStructured result:")
     for key, value in answer.items():
         print(f"{key}: {value}")

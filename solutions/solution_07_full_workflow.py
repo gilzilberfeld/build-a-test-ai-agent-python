@@ -2,21 +2,26 @@
 Solution 7: Complete API Test Agent
 Your task: Integrate all components into a complete workflow
 """
+from sys import api_version
 
 import requests
 import json
 import time
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
+from solutions.solution_02_test_suggestions import APIAnalyzer
+from solutions.solution_04_code_generation import TestCodeGenerator
+from solutions.solution_06_result_analysis import TestExecutionEngine
 from utils.sample_apis import SAMPLE_ENDPOINTS
 
 
 class APITestAgent:
     def __init__(self, api_key):
+        self.api_key = api_key
         self.client = genai.Client(api_key=api_key)
         self.test_results = []
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(max_output_tokens=400)
 
     def analyze_endpoint(self, endpoint_info):
@@ -114,8 +119,13 @@ class APITestAgent:
 
     def run_complete_analysis(self, api_endpoints):
         """
-        Run complete analysis workflow for multiple endpoints
+        Run complete analysis workflow for multiple endpoints using modular agents
         """
+        # Instantiate agents from solutions 01-06
+        api_analyzer = APIAnalyzer(self.api_key)
+        test_code_generator = TestCodeGenerator(self.api_key)
+        test_executor = TestExecutionEngine(self.api_key)
+
         results = {
             "total_endpoints": len(api_endpoints),
             "tests_run": 0,
@@ -128,22 +138,28 @@ class APITestAgent:
             print(f"\n🔍 Analyzing {endpoint['method']} {endpoint['path']}...")
 
             # Step 1: Analyze endpoint
-            analysis = self.analyze_endpoint(endpoint)
+            analysis = api_analyzer.analyze_api_endpoint(endpoint)
 
-            # Step 2: Generate test code
-            print("💡 Generating test code...")
-            test_code = self.generate_test_for_endpoint(endpoint)
+            # Step 2: Suggest test cases
+            test_cases = api_analyzer.get_test_suggestions(endpoint)
 
-            # Step 3: Execute test
-            print("🚀 Executing test...")
-            execution_result = self.execute_test_code(test_code)
+            # Step 3: Generate test code
+            test_code = test_code_generator.generate_test_function(test_cases[0], endpoint)
+            test_code = test_code.strip().replace("```python", "").replace("```", "")
 
-            # Step 4: Collect results
+            # Step 4: Execute test
+            execution_result = test_executor.execute_test(test_code)
+
+            # Step 5: Analyze result
+            result_summary = test_executor.analyze_test_results(execution_result)
+
             endpoint_result = {
                 "endpoint": f"{endpoint['method']} {endpoint['path']}",
                 "analysis": analysis,
+                "test_cases": test_cases,
                 "test_executed": execution_result["execution_success"],
                 "test_result": execution_result.get("test_result", {}),
+                "result_summary": result_summary,
                 "error": execution_result.get("error")
             }
 
@@ -215,14 +231,14 @@ def main():
 
     agent = APITestAgent(GEMINI_API_KEY)
 
-    # Use sample endpoints
-    endpoints = SAMPLE_ENDPOINTS[0]["endpoints"][:3]  # First 3 endpoints
+    # Use sample endpoint
+    endpoints = SAMPLE_ENDPOINTS[0]["endpoints"]
 
-    print(f"Testing {len(endpoints)} endpoints...")
+    print(f"Testing one endpoint...")
     print("=" * 60)
 
     # Run complete analysis
-    results = agent.run_complete_analysis(endpoints)
+    results = agent.run_complete_analysis([endpoints[0]])
 
     print("\n" + "=" * 60)
     print("🎉 ANALYSIS COMPLETE!")

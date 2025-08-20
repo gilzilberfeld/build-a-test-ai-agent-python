@@ -7,13 +7,13 @@ import requests
 import json
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 
 
 class ResponseValidator:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(max_output_tokens=300)
 
     def validate_response_structure(self, response_data, expected_structure):
@@ -39,7 +39,8 @@ class ResponseValidator:
         VALID: true/false
         ISSUES: list any problems found
 
-        Be specific about what's wrong if validation fails.
+        Be specific about what's wrong if validation fails. 
+        If the structure is invalid, specify what about it is invalid.
         """
 
         response = self.client.models.generate_content(

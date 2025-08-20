@@ -6,15 +6,16 @@ Your task: Create test suggestions for the analyzed
 
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 from utils.sample_apis import get_sample_api
+import re
 
 
 class APIAnalyzer:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
-        self.config = types.GenerateContentConfig(max_output_tokens=200)
+        self.model_name = GEMINI_MODEL_NAME
+        self.config = types.GenerateContentConfig(max_output_tokens=500)
 
     def analyze_api_endpoint(self, endpoint_info):
         """
@@ -63,7 +64,7 @@ class APIAnalyzer:
         Description: {endpoint_info['description']}
 
         Generate 5 different test scenarios for this API. For each test, provide:
-        1. Test name
+        1. A proper test name
         2. What it tests
         3. Expected result
 
@@ -91,9 +92,22 @@ class APIAnalyzer:
             if line.strip() and any(char.isdigit() for char in line[:5]):
                 # Extract test name after number
                 test_name = line.split('.', 1)[1].strip() if '.' in line else line.strip()
+                test_name = extract_test_name(line)
                 suggestions.append(test_name)
 
         return suggestions[:5]  # Return max 5 suggestions
+
+
+def extract_test_name(text):
+    """
+    Extracts the test name from a string like:
+    1. **Test Name:** `GET_200_OK_Response`
+    Returns: GET_200_OK_Response
+    """
+    match = re.search(r'`(.*?)`', text)
+    if match:
+        return match.group(1).strip()
+    return text.strip()
 
 
 def main():

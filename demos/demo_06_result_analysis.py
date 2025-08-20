@@ -6,7 +6,7 @@ import requests
 import json
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 
 
 def simple_api_test():
@@ -31,7 +31,7 @@ def simple_api_test():
 def analyze_with_gemini(result):
     """Use Gemini to analyze the API test result"""
     client = genai.Client(api_key=GEMINI_API_KEY)
-    model_name = 'gemini-1.5-flash-latest'
+    model_name = GEMINI_MODEL_NAME
     config = types.GenerateContentConfig(max_output_tokens=150)
     prompt = f"""
     Here is the result of an API test:

@@ -1,5 +1,9 @@
 # Todos & Outline
 
+# Need a formalizing a test info exercise prompt. 
+
+# move the categorization to later. Replace with the creating of a structured result to the generator.
+
 ## full solution needs rewrite to use existing modules.
 ## Needs twice
 

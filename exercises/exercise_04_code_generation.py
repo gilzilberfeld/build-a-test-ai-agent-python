@@ -5,13 +5,13 @@ Your task: Generate Python test code
 
 import google.genai as genai
 from google.genai import types
-from config import GEMINI_API_KEY
+from config import GEMINI_API_KEY, GEMINI_MODEL_NAME
 
 
 class TestCodeGenerator:
     def __init__(self, api_key):
         self.client = genai.Client(api_key=api_key)
-        self.model_name = 'gemini-1.5-flash-latest'
+        self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(max_output_tokens=200)
 
     def generate_test_function(self, test_description, endpoint_info):
