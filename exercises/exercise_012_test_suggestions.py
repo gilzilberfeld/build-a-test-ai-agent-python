@@ -17,27 +17,38 @@ class APIAnalysisAgent:
 
     def analyze_api_endpoint(self, endpoint_info):
         """
-        TODO: Call the model to analyze an API endpoint
-
-        Args:
-            endpoint_info: Dict with 'method', 'path', 'description'
-
-        Returns:
-            String with analysis of what this endpoint does
+        Analyze an API endpoint and understand its purpose
         """
-        # HINT: Create a prompt that asks the AI to analyze the endpoint
-        # Consider what kind of testing might be needed
-
-        # TODO: Add your analysis prompt here
         prompt = f"""
-            
+        Analyze this API endpoint and explain what it does:
+
+        Method: {endpoint_info['method']}
+        Path: {endpoint_info['path']}
+        Description: {endpoint_info['description']}
+
+        Provide a concise analysis of:
+        1. What this endpoint does
+        2. What data it likely returns
+        3. Common use cases
+        4. Potential issues to test for
+
+        Keep response under 150 words.
         """
-
-        # TODO: Make the API call
-
-        # TODO: Return the response
-
-        return "TODO: Implement API analysis"
+        response = self.client.models.generate_content(
+            model=self.model_name,
+            contents=[
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text="You are an expert API analyst focused on testing scenarios.")]
+                ),
+                types.Content(
+                    role="user",
+                    parts=[types.Part.from_text(text=prompt)]
+                )
+            ],
+            config=self.config
+        )
+        return response.text
 
     def get_testing_suggestions(self, endpoint_info):
         """
@@ -69,10 +80,8 @@ def main():
 
     print(f"Analyzing endpoint: {endpoint['method']} {endpoint['path']}")
 
-    # TODO: Create agent instance
     agent = APIAnalysisAgent(GEMINI_API_KEY)
 
-    # TODO: Analyze the endpoint
     analysis = agent.analyze_api_endpoint(endpoint)
     print(f"\nAnalysis: {analysis}")
 

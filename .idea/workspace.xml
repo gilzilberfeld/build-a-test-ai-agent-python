@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Validation exercise">
-      <change afterPath="$PROJECT_DIR$/exercises/exercise_051_response_validation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/solution_052_detect_anomalies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exercises/exercise_05_validation_detect_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_052_detect_anomalies.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/solution_05_validation_detect_anomalies.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_051_response_validation.py" afterDir="false" />
+    <list default="true" id="ba90daff-225d-4033-8295-4f82f40f22bd" name="Changes" comment="Response validation and anomalies">
+      <change afterPath="$PROJECT_DIR$/exercises/exercise_012_test_suggestions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/solution_012_test_suggestions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercises/exercise_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercises/exercise_011_api_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/solution_01_api_analysis_suggestions.py" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/solution_011_api_analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +55,7 @@
     "Python.demo_0Z_code_validation.executor": "Run",
     "Python.exercise_031_code_generation.executor": "Run",
     "Python.exercise_032_code_validation.executor": "Run",
+    "Python.solution_011_api_analysis.executor": "Run",
     "Python.solution_01_api_analysis_suggestions.executor": "Run",
     "Python.solution_022_test_prioritization.executor": "Run",
     "Python.solution_02_test_categories_prioritization.executor": "Run",
@@ -81,29 +82,7 @@
       <recent name="C:\GitHub\Workshops\build-a-test-agent-python\exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.solution_052_detect_anomalies">
-    <configuration name="demo_0Z_code_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="build-a-test-agent-python" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demos" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demos/demo_0Z_code_validation.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.solution_011_api_analysis">
     <configuration name="exercise_032_code_validation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="build-a-test-agent-python" />
       <option name="ENV_FILES" value="" />
@@ -118,6 +97,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercises/exercise_032_code_validation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="solution_011_api_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="build-a-test-agent-python" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/solutions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/solutions/solution_011_api_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -194,11 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.solution_011_api_analysis" />
         <item itemvalue="Python.solution_052_detect_anomalies" />
         <item itemvalue="Python.solution_051_response_validation" />
         <item itemvalue="Python.solution_032_code_validation" />
         <item itemvalue="Python.exercise_032_code_validation" />
-        <item itemvalue="Python.demo_0Z_code_validation" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +314,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755674777866</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Response validation and anomalies">
+      <option name="closed" value="true" />
+      <created>1755675687150</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1755675687150</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +349,7 @@
     <MESSAGE value="Full workflow (bare)" />
     <MESSAGE value="Validation demo" />
     <MESSAGE value="Validation exercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation exercise" />
+    <MESSAGE value="Response validation and anomalies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Response validation and anomalies" />
   </component>
 </project>
