@@ -27,8 +27,8 @@
 
 ## ex5-> validation and anomalies. Can be deferred to later.
 
-## Demo 4 (whole process)
-## ex6 -> The whole process, from test case generation to execution and analysis.
+## v Demo 4 (whole process)
+## v ex6 -> The whole process, from test case generation to execution and analysis.
 ### It doesen't use the modules created before. Might want to use the modules.
 
 Possible outline:
@@ -51,7 +51,7 @@ Possible outline:
 Advanced Topics:
 15. Exercise 2.2: Prioritization
 16. Demo Z: For Validation
-17. 
 17. Exercise 3.2: code Validation
+18. 
 19. Exercise 5.1: Result validation
 20. Exercise 5.2: Anomalies
