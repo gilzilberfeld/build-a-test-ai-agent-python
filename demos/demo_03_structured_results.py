@@ -1,3 +1,8 @@
+"""
+Demo 3: Structured results - Shows how AI can return easily parsable responses
+"""
+
+
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY

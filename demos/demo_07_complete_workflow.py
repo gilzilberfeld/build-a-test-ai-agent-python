@@ -1,5 +1,5 @@
 """
-Demo 4: Complete Workflow - Shows all pieces working together
+Demo 7: Complete Workflow - Shows all pieces working together
 """
 
 import requests

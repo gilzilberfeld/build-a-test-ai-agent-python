@@ -1,5 +1,5 @@
 """
-Demo 3: Code Execution - Shows how to run generated code safely
+Demo 6: Result analysis - Shows how to use AI to evaluate the response of as a test
 """
 
 import requests

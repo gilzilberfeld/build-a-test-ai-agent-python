@@ -40,7 +40,6 @@ def main():
     print("=== Simple AI Agent Demo ===")
 
     # Create our simple agent
-
     agent = SimpleAgent(GEMINI_API_KEY)
 
     # Ask it to think about APIs

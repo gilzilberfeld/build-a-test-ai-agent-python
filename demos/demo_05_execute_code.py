@@ -1,3 +1,8 @@
+"""
+Demo 5: Code execution - Shows how AI can generate code,
+        how to run it and extract results from it
+"""
+
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY
@@ -32,6 +37,7 @@ def main():
 
     print("Generated function code:\n")
     print(code)
+
     # Execute the generated code and call the function
     exec_globals = {}
     exec(code, exec_globals)

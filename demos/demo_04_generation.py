@@ -1,3 +1,7 @@
+"""
+Demo 4: Test Code Generation - Shows how AI can generate code
+"""
+
 import google.genai as genai
 from google.genai import types
 from config import GEMINI_API_KEY
@@ -31,11 +35,6 @@ def main():
     print(code)
     # Remove the python code wrapper
     code = code.strip().replace("```python", "").replace("```", "")
-    # Execute the generated code and call the function
-    exec_globals = {}
-    exec(code, exec_globals)
-    print("\nFunction output:")
-    exec_globals['hello_name'](name)
 
 if __name__ == "__main__":
     main()
