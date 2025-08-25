@@ -34,7 +34,6 @@ def main():
     code = agent.generate_hello_function(name)
     print("Generated function code:\n")
     # Remove the python code wrapper
-    code = code.strip().replace("```python", "").replace("```", "")
     print(code)
 
 if __name__ == "__main__":

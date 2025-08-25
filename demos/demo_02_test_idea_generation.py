@@ -20,6 +20,7 @@ class TestIdeaGenerator:
         prompt = f"""
         API Description: {api_description}
 
+        Generate ideas for tests that should be performed on this API.
         For each test, provide just the test name in this format:
         1. Test name here
         2. Test name here

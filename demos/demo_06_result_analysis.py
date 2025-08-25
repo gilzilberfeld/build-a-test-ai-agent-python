@@ -32,12 +32,13 @@ def analyze_with_gemini(result):
     """Use Gemini to analyze the API test result"""
     client = genai.Client(api_key=GEMINI_API_KEY)
     model_name = GEMINI_MODEL_NAME
-    config = types.GenerateContentConfig(max_output_tokens=150)
+    config = types.GenerateContentConfig(max_output_tokens=300)
     prompt = f"""
     Here is the result of an API test:
     {json.dumps(result, indent=2)}
     
-    Please analyze the result and suggest improvements or next steps.
+    Please analyze the result.
+    Return a JSON object with key "success" (boolean) indicating if the test passed, and key "analysis_result" containing the whole analysis.
     """
     response = client.models.generate_content(
         model=model_name,
@@ -53,7 +54,10 @@ def analyze_with_gemini(result):
         ],
         config=config
     )
-    return response.text
+    result = response.text
+    result = result.strip().replace("```json", "").replace("```", "")
+
+    return result
 
 
 def main():
@@ -64,16 +68,22 @@ def main():
 
     # Analyze results
     if result["success"]:
-        print("\n✅ Test PASSED!")
+        print("\n✅ Call SUCCEEDED!")
     else:
-        print("\n❌ Test FAILED!")
+        print("\n❌ Call FAILED!")
 
     print(f"Response time: {result['response_time']:.2f} seconds")
 
     # Use Gemini to analyze the result
     print("\nGemini Analysis:")
     analysis = analyze_with_gemini(result)
-    print(analysis)
+    analysis_json = json.loads(analysis)
+    if analysis_json["success"]:
+        print("\n✅ Test PASSED!")
+    else:
+        print("\n❌ Test FAILED!")
+
+    print(analysis_json["analysis_result"])
 
 
 if __name__ == "__main__":

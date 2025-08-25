@@ -13,13 +13,14 @@ class StructuredAgent:
         self.client = genai.Client(api_key=api_key)
         self.model_name = GEMINI_MODEL_NAME
         self.config = types.GenerateContentConfig(
-            max_output_tokens=8192
+            max_output_tokens=1000
         )
 
     def think(self, question):
         """Ask the AI to respond with a structured JSON result"""
         prompt = """
             You are a helpful API testing assistant. 
+            Get me 3 areas to tests, 2 test examples and 2 notes for the given question.
             Reply in JSON format with keys: 'areas_to_test', 'test_examples', 'notes'."
         """
         response = self.client.models.generate_content(

@@ -40,7 +40,7 @@ def main():
     print(code)
 
     # Execute the generated code and call the function
-    exec_globals = {}
+    exec_globals = {}  # Dictionary to hold the execution context
     exec(code, exec_globals)
     print("\nFunction output:")
     exec_globals['hello_name'](name)
